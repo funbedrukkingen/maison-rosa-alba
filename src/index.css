@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design System for Maison Rosa Alba - Ecological Living Community */
+/* All colors stored as raw HSL channel values */
+
+@layer base {
+  :root {
+    /* Core palette */
+    --background: 40 33% 99%;
+    --foreground: 25 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 25 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 30% 15%;
+
+    /* Primary: warm terracotta/rust brown */
+    --primary: 20 45% 38%;
+    --primary-foreground: 40 33% 99%;
+
+    --secondary: 30 25% 94%;
+    --secondary-foreground: 25 30% 20%;
+
+    --muted: 30 15% 95%;
+    --muted-foreground: 25 12% 45%;
+
+    --accent: 25 35% 88%;
+    --accent-foreground: 25 30% 20%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 40 33% 98%;
+
+    --border: 25 15% 90%;
+    --input: 25 15% 90%;
+    --ring: 20 45% 38%;
+
+    --radius: 0.625rem;
+
+    /* Sidebar */
+    --sidebar-background: 30 20% 96%;
+    --sidebar-foreground: 25 30% 20%;
+    --sidebar-primary: 20 45% 38%;
+    --sidebar-primary-foreground: 40 33% 98%;
+    --sidebar-accent: 25 25% 92%;
+    --sidebar-accent-foreground: 25 30% 20%;
+    --sidebar-border: 25 15% 89%;
+    --sidebar-ring: 20 45% 38%;
+
+    /* Custom brand tokens */
+    --brand-rust: 20 45% 38%;
+    --brand-cream: 40 60% 96%;
+    --brand-sage: 85 20% 42%;
+    --brand-warm-white: 40 33% 97%;
+  }
+
+  .dark {
+    --background: 25 25% 8%;
+    --foreground: 40 20% 94%;
+
+    --card: 25 25% 10%;
+    --card-foreground: 40 20% 94%;
+
+    --popover: 25 25% 10%;
+    --popover-foreground: 40 20% 94%;
+
+    --primary: 22 50% 55%;
+    --primary-foreground: 25 25% 8%;
+
+    --secondary: 25 15% 18%;
+    --secondary-foreground: 40 20% 90%;
+
+    --muted: 25 12% 16%;
+    --muted-foreground: 30 10% 58%;
+
+    --accent: 25 20% 20%;
+    --accent-foreground: 40 20% 94%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 40 33% 98%;
+
+    --border: 25 15% 18%;
+    --input: 25 15% 18%;
+    --ring: 22 50% 55%;
+
+    --sidebar-background: 25 28% 10%;
+    --sidebar-foreground: 40 18% 88%;
+    --sidebar-primary: 22 52% 50%;
+    --sidebar-primary-foreground: 25 25% 8%;
+    --sidebar-accent: 25 15% 16%;
+    --sidebar-accent-foreground: 40 18% 88%;
+    --sidebar-border: 25 12% 16%;
+    --sidebar-ring: 22 50% 55%;
+
+    --brand-rust: 22 50% 50%;
+    --brand-cream: 25 20% 14%;
+    --brand-sage: 85 18% 35%;
+    --brand-warm-white: 25 22% 12%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings:
+      "liga" 1,
+      "kern" 1;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom utility classes using brand tokens */
+.text-brand-rust {
+  color: hsl(var(--brand-rust));
+}
+
+.bg-brand-rust {
+  background-color: hsl(var(--brand-rust));
+}
+
+.bg-brand-cream {
+  background-color: hsl(var(--brand-cream));
+}
